@@ -5,8 +5,7 @@ const catagoryData = async () => {
     const response = await fetch(url);
     const data = await response.json();
     return data.data.news_category;
-
-}
+};
 
 const setCatagory = async () => {
 
@@ -36,12 +35,23 @@ const catagoryNews = async (id) => {
     // start spinner
     loadingSpinner(true);
 
+
     const url = `https://openapi.programming-hero.com/api/news/category/${id}`
     // console.log(url);
     const response = await fetch(url);
     const data = await response.json();
     const everyNews = data.data;
+
+    // everyNews.sort();
     // console.log(everyNews);
+
+    const newsNumbers = document.getElementById("news-numbers")
+    newsNumbers.innerText = "";
+    // console.log(newsNumbers);
+    for (const newsNum of everyNews) {
+        const newsCount = Object.keys(everyNews).length
+        newsNumbers.innerText = `${newsCount} News Published`
+    };
 
     const newsContainer = document.getElementById("news-container");
     newsContainer.innerHTML = "";
@@ -54,7 +64,6 @@ const catagoryNews = async (id) => {
     else {
         noNewsFound.classList.add("d-none");
     }
-
     everyNews.forEach(news => {
         // console.log(news);
         const div = document.createElement("div");
@@ -112,6 +121,8 @@ const catagoryNews = async (id) => {
 };
 
 
+
+
 const modalNews = async (newsId) => {
     // start spinner
     loadingSpinner(true);
@@ -155,6 +166,8 @@ const modalNews = async (newsId) => {
     loadingSpinner(false);
 };
 
+
+
 const loadingSpinner = isLoading => {
     const loadinSpinner = document.getElementById("loading-spinner");
     if (isLoading) {
@@ -163,6 +176,6 @@ const loadingSpinner = isLoading => {
     else {
         loadinSpinner.classList.add("d-none");
     }
-}
+};
 
 setCatagory();
