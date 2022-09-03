@@ -32,47 +32,45 @@
     <main class="container">
         <!-- var let const -->
         <Section>
-            <h3 class="mb-4">What is the difference between VAR const and let?</h3>
-            <figure class="table">
-                <table class="table table-dark table-hover">
-                    <tbody>
-                        <tr>
-                            <td><strong>var</strong></td>
-                            <td><strong>let</strong></td>
-                            <td><strong>const</strong></td>
-                        </tr>
-                        <tr>
-                            <td>The scope of a <i>var </i>variable is functional scope.</td>
-                            <td>The scope of a<i> let</i> variable is block scope.</td>
-                            <td>The scope of a <i>const</i> variable is block scope.</td>
-                        </tr>
-                        <tr>
-                            <td>It can be updated and re-declared into the scope.</td>
-                            <td>It can be updated but cannot be re-declared into the scope.</td>
-                            <td>It cannot be updated or re-declared into the scope.</td>
-                        </tr>
-                        <tr>
-                            <td>It can be declared without initialization.</td>
-                            <td>It can be declared without initialization.</td>
-                            <td>It cannot be declared without initialization.</td>
-                        </tr>
-                        <tr>
-                            <td>It can be accessed without initialization as its default value is “undefined”.</td>
-                            <td>It cannot be accessed without initialization otherwise it will give ‘referenceError’.
-                            </td>
-                            <td>It cannot be accessed without initialization, as it cannot be declared without
-                                initialization.</td>
-                        </tr>
-                        <tr>
-                            <td>hoisting done , with initializing as ‘default’ value</td>
-                            <td>Hoisting is done , but not initialized (this is the reason for error when we access the
-                                let variable before declaration/initialization</td>
-                            <td>Hoisting is done, but not initialized (this is the reason for error when we access the
-                                const variable before declaration/initialization</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </figure>
+            <h3 class="fs-4 fs-md-1 mb-4">What is the difference between VAR const and let?</h3>
+            <table class="table table-dark table-hover">
+                <tbody>
+                    <tr>
+                        <td><strong>var</strong></td>
+                        <td><strong>let</strong></td>
+                        <td><strong>const</strong></td>
+                    </tr>
+                    <tr>
+                        <td>The scope of a <i>var </i>variable is functional scope.</td>
+                        <td>The scope of a<i> let</i> variable is block scope.</td>
+                        <td>The scope of a <i>const</i> variable is block scope.</td>
+                    </tr>
+                    <tr>
+                        <td>It can be updated and re-declared into the scope.</td>
+                        <td>It can be updated but cannot be re-declared into the scope.</td>
+                        <td>It cannot be updated or re-declared into the scope.</td>
+                    </tr>
+                    <tr>
+                        <td>It can be declared without initialization.</td>
+                        <td>It can be declared without initialization.</td>
+                        <td>It cannot be declared without initialization.</td>
+                    </tr>
+                    <tr>
+                        <td>It can be accessed without initialization as its default value is “undefined”.</td>
+                        <td>It cannot be accessed without initialization otherwise it will give ‘referenceError’.
+                        </td>
+                        <td>It cannot be accessed without initialization, as it cannot be declared without
+                            initialization.</td>
+                    </tr>
+                    <tr>
+                        <td>hoisting done , with initializing as ‘default’ value</td>
+                        <td>Hoisting is done , but not initialized (this is the reason for error when we access the
+                            let variable before declaration/initialization</td>
+                        <td>Hoisting is done, but not initialized (this is the reason for error when we access the
+                            const variable before declaration/initialization</td>
+                    </tr>
+                </tbody>
+            </table>
         </Section>
         <!-- Arrow function vs Regular function -->
         <!-- Why we should use template string? -->
@@ -80,60 +78,187 @@
             <!-- Accordian Style -->
             <div class="accordion" id="accordionPanelsStayOpenExample">
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                        Why do we use Template Strings (<code>backticks</code>) in JavaScript?
-                    </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                    <div class="accordion-body">
-                        Template strings are a powerful feature of modern JavaScript released in ES6.<strong> It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript.</strong>
-                        <br>
-                        <br>
-                        Using the template literal for the HTML is definitely more readable by reducing the annoyance. Your string can span multiple lines. You don't have to escape quotation characters. You don't have to use the plus operator.
-                        <br>
-                        <br>
-                        <strong>* Advantage of using backticks: 
-                            <br> 1. Multi-line strings: A single string can span two or more lines.
-                            <br> 2. Expression Interpolation: Javascript variables and expressions can be inserted directly in the string.
-                        </strong>
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            Why do we use Template Strings (<code>backticks</code>) in JavaScript?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                        aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                            Template strings are a powerful feature of modern JavaScript released in ES6.<strong> It
+                                lets us insert/interpolate variables and expressions into strings without needing to
+                                concatenate like in older versions of JavaScript.</strong>
+                            <br>
+                            <br>
+                            Using the template literal for the HTML is definitely more readable by reducing the
+                            annoyance. Your string can span multiple lines. You don't have to escape quotation
+                            characters. You don't have to use the plus operator.
+                            <br>
+                            <br>
+                            <strong>* Advantage of using backticks:
+                                <br> 1. Multi-line strings: A single string can span two or more lines.
+                                <br> 2. Expression Interpolation: Javascript variables and expressions can be inserted
+                                directly in the string.
+                            </strong>
+                        </div>
                     </div>
-                  </div>
                 </div>
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                        Arrow <code> () => {}</code> vs Regular function <code> function () {}</code>
-                    </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                    <div class="accordion-body">
-                        <strong>Understanding the differences between regular and arrow functions helps choose the right syntax for specific needs.</strong>
-                        <br>
-                        <br>
-                        <strong>1.</strong> This value inside a regular function is dynamic and depends on the invocation. But this inside the arrow function is bound lexically and equals to this of the outer function.
-                        <br>
-                        <br>
-                        <strong>2.</strong>Arguments object inside the regular functions contains the list of arguments. The arrow function, on the opposite, doesn't define arguments (but you can easily access the arrow function arguments using a rest parameter ...args).
-                        <br>
-                        <br>
-                        <strong>3.</strong>If the arrow function has one expression, then the expression is returned implicitly, even without using the return keyword.
-                        <br>
-                        <br>
-                        <strong>4.</strong>Last but not least, you can define methods using the arrow function syntax inside classes. Fat arrow methods bind this value to the class instance.
-                        <br>
-                        Anyhow the fat arrow method is invoked, this always equals the class instance, which is useful when the methods are used as callbacks.
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            Arrow <code> () => {}</code> vs Regular function <code> function () {}</code>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body">
+                            <strong>Understanding the differences between regular and arrow functions helps choose the
+                                right syntax for specific needs.</strong>
+                            <br>
+                            <br>
+                            <strong>1. </strong> This value inside a regular function is dynamic and depends on the
+                            invocation. But this inside the arrow function is bound lexically and equals to this of the
+                            outer function.
+                            <br>
+                            <br>
+                            <strong>2. </strong>Arguments object inside the regular functions contains the list of
+                            arguments. The arrow function, on the opposite, doesn't define arguments (but you can easily
+                            access the arrow function arguments using a rest parameter ...args).
+                            <br>
+                            <br>
+                            <strong>3. </strong>If the arrow function has one expression, then the expression is
+                            returned implicitly, even without using the return keyword.
+                            <br>
+                            <br>
+                            <strong>4. </strong>Last but not least, you can define methods using the arrow function
+                            syntax inside classes. Fat arrow methods bind this value to the class instance.
+                            <br>
+                            Anyhow the fat arrow method is invoked, this always equals the class instance, which is
+                            useful when the methods are used as callbacks.
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
+            </div>
         </section>
-        <section>
-
+         <!-- Differences between forEach and map methods? -->
+        <section class="mt-4">
+            <h3 class="fs-4 fs-md-1 mb-4">Differences between forEach() and map() methods:</h3>
+                <table class="table table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>forEach()</th>
+                            <th>map()&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>The forEach() method does not create a new array based on the given array.</td>
+                            <td>The map() method creates an entirely new array.</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>The forEach() method returns “<i>undefined</i>“.</td>
+                            <td>The map() method returns the newly created array according to the provided callback
+                                function.</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>The forEach() method doesn’t return anything hence the method chaining technique cannot
+                                be applied here.&nbsp;</td>
+                            <td>With the map() method, we can chain the other array Instance methods i.e returned value
+                                of the map() method invokes the next method in the chain.</td>
+                        </tr>
+                        <tr>
+                            <th><strong>4.</strong></th>
+                            <td>It is not executed for empty elements.</td>
+                            <td>It &nbsp;does not change the original array.</td>
+                        </tr>
+                        <tr>
+                            <th><strong>5.</strong></th>
+                            <td>It is an ECMAScript5 (ES5) feature.</td>
+                            <td>It calls a function once for each element in an array.</td>
+                        </tr>
+                        <tr>
+                            <th><strong>6.</strong></th>
+                            <td>
+                                <p>Its supported browsers are -:</p>
+                                <p>Chrome , Internet Explorer 9-11 , Opera Mini , Safari , Microsoft Edge , Firefox</p>
+                            </td>
+                            <td>
+                                <p>Its supported browsers are -:</p>
+                                <p>Chrome , Internet Explorer 9-11 , Opera Mini , Safari , Microsoft Edge , Firefox</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+        </section>
+        <!-- What is difference between filter and find? -->
+        <section class="my-4">
+            <h3 class="fs-4 fs-md-1 mb-4">What is difference between filter and find?</h3>
+            <table class="table table-dark table-hover">
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td><strong>find()</strong></td>
+                        <td><strong>filter()</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>1.</strong></td>
+                        <td>The find() method is used to find all the descendant elements of the selected element.
+                        </td>
+                        <td>The filter() method is used to filter all the elements</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2.</strong></td>
+                        <td>The find() method finds the element in the DOM tree by traversing through the root to
+                            the leaf.</td>
+                        <td>The filter() method returns the element that matches and removes the element that does
+                            not match.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3.</strong></td>
+                        <td>The find() method search through all the child elements only.</td>
+                        <td>The filter() method search through all the elements</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4.</strong></td>
+                        <td>It does not execute the function for empty elements.</td>
+                        <td>The filter() method does not change the original array.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5.</strong></td>
+                        <td>It does not change the original array.</td>
+                        <td>The filter() method does not execute the function for empty elements.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6.</strong></td>
+                        <td>
+                            <p>Its syntax is -:</p>
+                            <p>array.find(function(value, Index, array),thisValue)</p>
+                        </td>
+                        <td>
+                            <p>Its syntax is -:</p>
+                            <p>array.filter(function(value, Index, array), thisValue)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>7.</strong></td>
+                        <td>This method returns undefined if no elements are found.</td>
+                        <td>In filter() method a value is passed to the function as its this value</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
     <!-- footer here -->
-    <hr class="border border-secondary">
+    <hr class="border border-secondary mt-5">
     <footer class="text-secondary mt-5 text-center">
         <div class="row align-items-center align-self-center justify-content-around">
             <div class="col-sm-12 col-md-6">
