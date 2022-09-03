@@ -22,8 +22,9 @@ const setCatagory = async () => {
         // console.log(perCata);
         const li = document.createElement("li");
         li.classList.add('list-group-item');
+        li.classList.add('gap-2');
         li.innerHTML = `
-                <p onclick="catagoryNews('${perCata.category_id}')">${perCata.category_name}</p>
+                    <button type="button" class="btn btn-outline-dark" onclick="catagoryNews('${perCata.category_id}')">${perCata.category_name}</button>
                 `;
         catagoryList.appendChild(li);
     }
