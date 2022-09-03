@@ -1,8 +1,5 @@
 
 // catagory data
-
-
-
 const catagoryData = async () => {
     const url = "https://openapi.programming-hero.com/api/news/categories";
     const response = await fetch(url);
@@ -29,9 +26,10 @@ const setCatagory = async () => {
                 `;
         catagoryList.appendChild(li);
     }
-    // stop spinner
-    loadingSpinner(false)
     // console.log(catagoryList);
+
+    // stop spinner
+    loadingSpinner(false);
 }
 
 const catagoryNews = async (id) => {
@@ -110,11 +108,14 @@ const catagoryNews = async (id) => {
     });
 
     // stop spinner
-    loadingSpinner(false)
-}
+    loadingSpinner(false);
+};
 
 
 const modalNews = async (newsId) => {
+    // start spinner
+    loadingSpinner(true);
+
     const url = `https://openapi.programming-hero.com/api/news/${newsId}`
 
     const response = await fetch(url);
@@ -150,7 +151,8 @@ const modalNews = async (newsId) => {
         `;
         modalView.appendChild(div);
     });
-
+    // stop spinner
+    loadingSpinner(false);
 };
 
 const loadingSpinner = isLoading => {
