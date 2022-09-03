@@ -1,10 +1,3 @@
-// console.log("Main JS is working...!")
-
-// loadin spinner
-const loadinSpinner = document.getElementById("loading-spinner");
-loadinSpinner.classList.add("visually-hidden");
-// console.log(loadinSpinner)
-
 
 // catagory data
 const catagoryData = async () => {
@@ -15,6 +8,7 @@ const catagoryData = async () => {
 }
 
 const setCatagory = async () => {
+
     const data = await catagoryData();
     // console.log(data);
     const catagoryList = document.getElementById("catagory-list");
@@ -28,8 +22,7 @@ const setCatagory = async () => {
                 `;
         catagoryList.appendChild(li);
     }
-    // // console.log(catagoryList);
-
+    // console.log(catagoryList);
 }
 
 const catagoryNews = async (id) => {
@@ -39,11 +32,19 @@ const catagoryNews = async (id) => {
     const response = await fetch(url);
     const data = await response.json();
     const everyNews = data.data;
-
-
+    // console.log(everyNews);
+    
     const newsContainer = document.getElementById("news-container");
     newsContainer.innerHTML = "";
-
+    
+    // No news found
+    const noNewsFound = document.getElementById("nothing-mssg-id");
+    if (everyNews.length === 0) {
+        noNewsFound.classList.remove("d-none");
+    }
+    else{
+        noNewsFound.classList.add("d-none");
+    }
 
     everyNews.forEach(news => {
         // console.log(news);
@@ -94,9 +95,11 @@ const catagoryNews = async (id) => {
        
        ` ;
         newsContainer.appendChild(div);
+
     });
 
 }
+
 
 const modalNews = async (newsId) => {
     const url = `https://openapi.programming-hero.com/api/news/${newsId}`
@@ -136,5 +139,15 @@ const modalNews = async (newsId) => {
     });
 
 };
+
+const loadinSpinner = isLoading => {
+    const loadinSpinner = document.getElementById("loading-spinner");
+    if (loadinSpinner) {
+        loadinSpinner.classList.remove("d-none");
+    }
+    else {
+        loadinSpinner.classList.add("d-none");
+    }
+}
 
 setCatagory();
