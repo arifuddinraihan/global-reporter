@@ -26,7 +26,9 @@ const setCatagory = async () => {
 }
 
 const catagoryNews = async (id) => {
-    // console.log("yes catagory news found", id)
+    // start spinner
+    loadingSpinner(true);
+    
     const url = `https://openapi.programming-hero.com/api/news/category/${id}`
     // console.log(url);
     const response = await fetch(url);
@@ -97,7 +99,9 @@ const catagoryNews = async (id) => {
         newsContainer.appendChild(div);
 
     });
-
+    
+    // stop spinner
+    loadingSpinner(false)
 }
 
 
@@ -140,9 +144,9 @@ const modalNews = async (newsId) => {
 
 };
 
-const loadinSpinner = isLoading => {
+const loadingSpinner = isLoading => {
     const loadinSpinner = document.getElementById("loading-spinner");
-    if (loadinSpinner) {
+    if (isLoading) {
         loadinSpinner.classList.remove("d-none");
     }
     else {
