@@ -15,7 +15,7 @@
 
 <body class="container">
     <!-- Header Start -->
-    <header>
+    <header class="sticky-top shadow p-2 bg-light shadow">
         <!-- navbar -->
         <nav class="navbar bg-light">
             <div class="container-fluid">
@@ -30,6 +30,7 @@
     <hr class="border border-secondary">
     <!-- Main Body here -->
     <main class="container">
+        <!-- var let const -->
         <Section>
             <h3 class="mb-4">What is the difference between VAR const and let?</h3>
             <figure class="table">
@@ -73,6 +74,63 @@
                 </table>
             </figure>
         </Section>
+        <!-- Arrow function vs Regular function -->
+        <!-- Why we should use template string? -->
+        <section class="mt-4">
+            <!-- Accordian Style -->
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        Why do we use Template Strings (<code>backticks</code>) in JavaScript?
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body">
+                        Template strings are a powerful feature of modern JavaScript released in ES6.<strong> It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript.</strong>
+                        <br>
+                        <br>
+                        Using the template literal for the HTML is definitely more readable by reducing the annoyance. Your string can span multiple lines. You don't have to escape quotation characters. You don't have to use the plus operator.
+                        <br>
+                        <br>
+                        <strong>* Advantage of using backticks: 
+                            <br> 1. Multi-line strings: A single string can span two or more lines.
+                            <br> 2. Expression Interpolation: Javascript variables and expressions can be inserted directly in the string.
+                        </strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        Arrow <code> () => {}</code> vs Regular function <code> function () {}</code>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                    <div class="accordion-body">
+                        <strong>Understanding the differences between regular and arrow functions helps choose the right syntax for specific needs.</strong>
+                        <br>
+                        <br>
+                        <strong>1.</strong> This value inside a regular function is dynamic and depends on the invocation. But this inside the arrow function is bound lexically and equals to this of the outer function.
+                        <br>
+                        <br>
+                        <strong>2.</strong>Arguments object inside the regular functions contains the list of arguments. The arrow function, on the opposite, doesn't define arguments (but you can easily access the arrow function arguments using a rest parameter ...args).
+                        <br>
+                        <br>
+                        <strong>3.</strong>If the arrow function has one expression, then the expression is returned implicitly, even without using the return keyword.
+                        <br>
+                        <br>
+                        <strong>4.</strong>Last but not least, you can define methods using the arrow function syntax inside classes. Fat arrow methods bind this value to the class instance.
+                        <br>
+                        Anyhow the fat arrow method is invoked, this always equals the class instance, which is useful when the methods are used as callbacks.
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+        <section>
+
+        </section>
     </main>
     <!-- footer here -->
     <hr class="border border-secondary">
