@@ -36,12 +36,27 @@
 
             </ul>
         </section>
+        <!-- search by section -->
+        <section class="mt-4">
+            <div class="form-group d-flex gap-4">
+                <label>Sort By:</label>
+                <div class="custom-select">
+                    <select id="input-sort">
+                        <option value="">Default</option>
+                        <option value="p.price-ASC">Views (Low &gt; High)</option>
+                        <option value="p.price-DESC">Views (High &gt; Low)</option>
+                    </select>
+                </div>
+            </div>
+        </section>
         <!-- total news found section -->
         <section>
-
+            <div>
+                <h5 class="fs-2 mt-4" id="news-numbers"></h5>
+            </div>
         </section>
         <!-- No news found section -->
-        <section>
+        <section class="mt-4">
             <div>
                 <h5 class="fs-2 d-none mt-4" id="nothing-mssg-id">No news found</h5>
             </div>
@@ -53,10 +68,6 @@
                     <span class="visually-hidden">Loading...</span>
                 </div>
             </div>
-        </section>
-        <!-- search by section -->
-        <section>
-            
         </section>
         <!-- news post section MAIN -->
         <section>
