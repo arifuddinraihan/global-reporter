@@ -50,16 +50,43 @@ const catagoryNews = async(id) => {
        div.classList.add("row");
        div.classList.add("my-2");
        div.classList.add("shadow-lg");
+       div.classList.add("align-items-center");
     //    div.classList.add("g-0");
        div.innerHTML = `
-                        <div class="col-md-2">
+                        <div class="col-md-2 py-2">
                             <img src=${news.thumbnail_url} class="img-fluid" alt="...">
                         </div>
                         <div class="col-md-10">
                             <div class="card-body">
                                 <h5 class="card-title">${news.title}</h5>
-                                <p class="card-text text-secondary">${news.details}</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <p class="card-text text-secondary">${news.details.slice(0,250) ? news.details.slice(0,250) + "..." : "No Details Shared"}</p>
+                                <p class="card-text">
+                                    <small class="text-muted">
+                                        <div class="container text-start">
+                                            <div class="row row-cols-sm-1 align-items-center">
+                                                <div class="col-md-4 col-xs-12">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-3">
+                                                        <img src=${news.author.img} class="img-thumbnail rounded-circle float-start" alt="...">
+                                                        </div>
+                                                        <div class="col-9">
+                                                        ${news.author.name ? news.author.name : "No Name found"}
+                                                        <br/>
+                                                        ${news.author.published_date ? news.author.published_date : "No date found"}
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-xs-12" style="margin-top: 20px;">
+                                                    <i class="fa-solid fa-eye p-2"></i>
+                                                    <span class="p-2">${news.total_view}</span>
+                                                    </div>
+                                                    <div class="col-md-4 col-xs-12" style="margin-top: 20px;">
+                                                    <button type="button" class="btn btn-outline-secondary">Read More...</button>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </small>
+                                </p>
                             </div>
                         </div>
        
