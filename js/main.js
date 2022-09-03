@@ -109,7 +109,7 @@ const modalNews = async (newsId) => {
     modalView.innerHTML = "";
     // console.log(modalView);
     newsInside.forEach(insideModal => {
-        console.log(insideModal)
+        // console.log(insideModal)
         const div = document.createElement("div");
         div.classList.add("modal-content")
         div.innerHTML = `
