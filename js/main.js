@@ -1,13 +1,20 @@
 
 // catagory data
+
+
+
 const catagoryData = async () => {
     const url = "https://openapi.programming-hero.com/api/news/categories";
     const response = await fetch(url);
     const data = await response.json();
     return data.data.news_category;
+
 }
 
 const setCatagory = async () => {
+
+    // start spinner
+    loadingSpinner(true);
 
     const data = await catagoryData();
     // console.log(data);
@@ -22,29 +29,31 @@ const setCatagory = async () => {
                 `;
         catagoryList.appendChild(li);
     }
+    // stop spinner
+    loadingSpinner(false)
     // console.log(catagoryList);
 }
 
 const catagoryNews = async (id) => {
     // start spinner
     loadingSpinner(true);
-    
+
     const url = `https://openapi.programming-hero.com/api/news/category/${id}`
     // console.log(url);
     const response = await fetch(url);
     const data = await response.json();
     const everyNews = data.data;
     // console.log(everyNews);
-    
+
     const newsContainer = document.getElementById("news-container");
     newsContainer.innerHTML = "";
-    
+
     // No news found
     const noNewsFound = document.getElementById("nothing-mssg-id");
     if (everyNews.length === 0) {
         noNewsFound.classList.remove("d-none");
     }
-    else{
+    else {
         noNewsFound.classList.add("d-none");
     }
 
@@ -99,7 +108,7 @@ const catagoryNews = async (id) => {
         newsContainer.appendChild(div);
 
     });
-    
+
     // stop spinner
     loadingSpinner(false)
 }
